@@ -1,16 +1,14 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
 
 const Todos = () => {
-    const viec1 = 'Viec 1'
-    const viec2 = 'Viec 2'
-    const viec3 = 'Viec 3'
+    const [todosState, setTodosState] = useState(['Việc 1', 'Việc 2', 'Việc 3'])
+
     return (
         <Fragment>
-            <p>{viec1}</p>
-            <p>{viec2}</p>
-            <p>{viec3}</p>
-        </Fragment>
-        
+            {todosState.map(todo =>{
+                return <p>{todo}</p>
+            })}
+        </Fragment>      
     )
 }
 
